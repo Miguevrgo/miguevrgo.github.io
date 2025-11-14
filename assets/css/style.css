@@ -836,35 +836,45 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px; 
+}
 
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
+.skills-item {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  gap: 15px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
-}
-
-.skill-progress-bg {
-  background: var(--jet);
+.skills-item .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   width: 100%;
-  height: 8px;
-  border-radius: 10px;
 }
 
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
+.skills-item .title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+}
+
+.skills-item i {
+  font-size: 36px;
+  color: var(--light-gray);
+}
+
+.skill-level {
+  color: var(--smoky-black);
+  background: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: auto;
+  text-transform: uppercase;
 }
 
 
@@ -954,6 +964,7 @@ main {
 .project-item > a { width: 100%; }
 
 .project-img {
+  aspect-ratio: 16 / 9;
   position: relative;
   width: 100%;
   height: 200px;
